@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="dist/css/animate.css">
+    <link rel="stylesheet" href="dist/css/swiper.css">
+    <style>
+        * {
+            margin:0;padding: 0;
+        }
+        html,body,.swiper-container{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        #music{
+			position:fixed;
+			right:0%;
+			top:0%;
+			width:5rem;
+		    height: 4rem;
+		    background: url(img/music_c0fda01.gif) no-repeat center;
+		    background-size: 60%;
+		    z-index: 50;		  	    
+		}
+		.music-box{	
+			width: 2.5rem;
+		    height: 2.5rem;
+		    position: absolute;
+		    top: calc(50% - .75rem);
+		    left: calc(50% - .75rem);
+		    margin-top: .25rem;
+		    margin-left: -.75rem;
+		    background: url(img/music_off_8d94020.png) transparent no-repeat center center;
+		    background-size: 100% 100%;		   
+		    animation: change 1.2s linear infinite;		   
+		}
+		
+		@keyframes change{
+			from{
+				transform: rotate(0deg);
+			}
+			to{
+				transform: rotate(360deg);
+			}
+		}
+		.jtbox{
+			position: absolute;
+			width: 2rem;
+			height: 1rem;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			bottom: .5rem;
+			background: url(img/web-swipe-tip_95ef4d6.png) no-repeat;
+			background-size: 100% 100%;
+			/*-webkit-animation: webSwipeTipAfter 1.5s infinite ease-in-out;*/
+			animation: webAfter 1.5s infinite ease-in-out;
+			z-index: 100;	
+		}
+		@keyframes webAfter{
+			from{
+				transform: translateY(-30px);
+				}
+			to{
+				transform: translateY(-2px);
+			}
+		}
+		
+        .box {
+            height: 100%;
+            width: 100%;
+        }
+
+        .box1 {
+            background: url(img/51ea7c0f-2706-43ce-9296-bb07291de2f8@70Q.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+        .box1-01{
+        	position: absolute;
+		    width: 86%;
+		    height: 84%;
+		    background: palevioletred;
+		    opacity: 0.5;
+		    margin: 13% 7%;
+        }
+        .box1-p1{
+        	color: white;
+		    font-size: 28px;
+		    position: absolute;
+		    display: block;
+		    margin: 25% 25%;
+		    z-index: 10;
+		    width: 60%;
+        }
+        .box1-p2{
+        	color: white;
+		    font-size: 30px;
+		    position: absolute;
+		    display: block;
+		    margin: 102% 41%;
+		    z-index: 10;
+		    width: 51%;
+        }
+        .box1-p3{
+        	color: white;
+		    font-size: 30px;
+		    position: absolute;
+		    display: block;
+		    margin: 136% 21%;
+		    z-index: 10;
+		    width: 51%;
+        }
+        .box1-p4{
+        	color: white;
+		    font-size: 30px;
+		    position: absolute;
+		    display: block;
+		    margin: 136% 71%;
+		    z-index: 10;
+		    width: 51%;
+        }
+        .box1-xin{      		
+			height: 25%;
+		    position: absolute;
+		    width: 56%;
+		    margin: 84% 22%;
+        }
+        
+        .box2 {
+            background: url(img/17584602-b295-474e-a83f-78af65423cef@70Q.jpg) no-repeat;
+            background-size: 100% 100%;
+            
+        }
+        .box3 {
+            background: url(img/720beb019e11ffb5.jpg) no-repeat;
+            background-size: 100% 100%;
+        } 
+        .box4 {
+            background: url(img/c9ea8f58-5ecb-40d0-a569-06017169c223@70Q.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+        .box5 {
+            background: url(img/61ee8123-6c66-436c-8488-bb9e2b1207ca@70Q.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .box2-kk{       	
+        	height: 80%;
+			position: absolute;
+			width: 90%;
+			margin: 18% 5%;
+        }
+        
+        .box2-02{
+            border-radius: 100%;
+		    height: 28%;
+		    position: absolute;
+		    width: 46%;
+		    margin: 32% 28%;
+        }
+        .box2-p1{
+        	color: white;
+        	font-size: 25px;
+        	position: absolute;
+        	display: block;
+        	margin: 100% 33%;
+   		    width: 50%; 	
+        }
+        .box2-p2{
+        	color: white;
+        	font-size: 25px;
+        	position: absolute;
+        	display: block;
+        	margin: 115% 33%;
+        	width: 50%;       	
+        }
+        .box2-p3{
+        	color: white;
+        	font-size: 25px;
+        	position: absolute;
+        	display: block;
+        	margin: 130% 31%; 
+        	width: 50%;      	
+        }
+        .box3-01{
+    	    height: 48%;
+		    position: absolute;
+		    width: 47%;
+		    margin: 2% 2%;
+        }
+        .box3-02{
+    	    height: 48%;
+		    position: absolute;
+		    width: 47%;
+		    margin: 90% 2%;
+        }
+        .box3-03{
+    	    height: 48%;
+		    position: absolute;
+		    width: 47%;
+		    margin: 90% 52%;
+        }
+        .box3-04{
+		    height: 48%;
+		    position: absolute;
+		    width: 47%;
+		    margin: 2% 52%;
+		   
+        }
+        .box3-00{
+        	position: absolute;
+		    width: 62%;
+		    height: 20%;
+		    background: palevioletred;
+		    opacity: 0.8;
+		    margin: 71% 19%;
+		    z-index: 10;
+        }
+        .box3-p1{
+        	color: white;
+		    font-size: 30px;
+		    position: absolute;
+		    display: block;
+		    margin: 83% 39%;
+		    width: 50%;
+		    z-index: 15;
+        }
+        .box4-01{
+        	height: 88%;
+		    position: absolute;
+		    width: 88%;
+		    margin: 6% 6%;
+        }
+        .box4-02{
+        	height: 28%;
+		    position: absolute;
+		    width: 53%;
+		    margin: -2% 25%;
+        }
+        .box4-p1{
+        	color: white;
+		    font-size: 63px;
+		    position: absolute;
+		    display: block;
+		    margin: 80% 14%;
+        }
+        .box4-p2{
+        	color: white;
+		    font-size: 57px;
+		    position: absolute;
+		    display: block;
+		    margin: 101% 11%; 
+        }
+        .box4-p3{
+        	color: white;
+		    font-size: 26px;
+		    position: absolute;
+		    display: block;
+		    width: 50%;
+		    margin: 133% 56%;
+        }
+         .box4-p4{
+        	color: white;
+		    font-size: 18px;
+		    position: absolute;
+		    display: block;
+		    width: 50%;
+		    margin: 146% 52%;
+        }
+        .box5-01{
+        	height: 95%;
+		    position: absolute;
+		    width: 100%;
+		    margin: 2% 0%;
+        }
+        .box5-02{
+        	height: 17%;
+		    position: absolute;
+		    width: 57%;
+		    margin: 13% 23%;
+        }
+        .box5-03{
+        	height: 25%;
+		    position: absolute;
+		    width: 53%;
+		    margin: 113% 25%;
+        }
+        .box5-p4{
+        	color: white;
+		    font-size: 21px;
+		    position: absolute;
+		    display: block;
+		    width: 50%;
+		    margin: 131% 43%;
+		    z-index: 10;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+
+<div class="swiper-container" id="app">
+    <div class="swiper-wrapper">
+    	<!--01-->
+        <div class="swiper-slide">
+            <div class="box box1">
+            	<p class="ani box1-p1" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s">
+                	Welcome You 
+                </p>
+            	<p class="ani box1-p2" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.6s" swiper-animate-delay="0.8s">
+                	Hello 
+                </p>
+                <p class="ani box1-p3" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.6s" swiper-animate-delay="0.9s">
+                	LOVE 
+                </p>
+                <p class="ani box1-p4" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.6s" swiper-animate-delay="1.1s">
+                	YOU
+                </p>
+            	<div class="ani box1-01" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.7s" swiper-animate-delay="0.3s"></div>      
+                <img class="ani box1-xin" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s" src="img/1db9f615-37a1-4e0c-bb77-bec7e480125d@132w_70Q_1an.png">
+                
+            </div>
+        </div>
+        <!--02-->
+        <div class="swiper-slide">
+        	<div class="box box2">	
+        		<p class="ani box2-p1" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.6s" swiper-animate-delay="0.5s">
+                	HELLO
+                </p>
+                <p class="ani box2-p2" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.6s" swiper-animate-delay="0.6s">
+                	HELLO
+                </p>
+                <p class="ani box2-p3" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.6s" swiper-animate-delay="0.7s">
+                	HI HELLO
+                </p>
+        		<img class="ani box2-kk" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" src="img/107b8e6c-ba12-41a9-9037-7b88e06e783b-8237.png">
+                <img class="ani box2-02" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" src="img/335b037d-14b8-4493-9abb-5dfb5bf82119@153w_70Q_1an.jpg"> 
+        	    
+        	</div>
+        </div>
+        <!--03-->
+        <div class="swiper-slide">
+        	<div class="box box3">
+        		<p class="ani box3-p1" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
+                	HELLO
+                </p>
+        		<div class="ani box3-00" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="1s"></div>
+        		<img class="ani box3-01" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s" src="img/4e86fac3-fac5-480b-98d7-6d4c6b44262f@155w_70Q_1an.jpg">
+        	    <img class="ani box3-02" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s" src="img/d6ae292a-2447-4ff8-af48-6e779dbba015@155w_70Q_1an.jpg">
+                <img class="ani box3-03" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.9s" src="img/14fc2d26-3dd7-4ef1-a979-df7cac5d75fd@161w_70Q_1an.jpg"> 
+        	    <img class="ani box3-04" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.7s" src="img/53c412d5-3c54-49ba-9b3b-1023f1db2a05@162w_70Q_1an.jpg"> 
+        	</div>
+        </div>
+        <!--04-->
+        <div class="swiper-slide">
+        	<div class="box box4">
+        		<img class="ani box4-01" swiper-animate-effect="rollIn" swiper-animate-duration="0.6s" swiper-animate-delay="0.3s" src="img/1bb8defc-fc7e-4156-90a1-3bb1a6390d6a@256w_70Q_1an.png">
+        	    <img class="ani box4-02" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s" src="img/7ed70635-dfce-43bd-b8d6-06dbdb594234@160w_70Q_1an.png">
+        	    <p class="ani box4-p1" swiper-animate-effect="rollIn" swiper-animate-duration="0.6s" swiper-animate-delay="0.6s">
+                	MY
+                </p>
+                <p class="ani box4-p2" swiper-animate-effect="rollIn" swiper-animate-duration="0.6s" swiper-animate-delay="0.8s">
+                	LOVE
+                </p>
+                <p class="ani box4-p3" swiper-animate-effect="tada" swiper-animate-duration="0.8s" swiper-animate-delay="0.9s">
+                	遇见你,
+                </p>
+                 <p class="ani box4-p4" swiper-animate-effect="tada" swiper-animate-duration="0.8s" swiper-animate-delay="0.9s">
+                	下雨天！！！
+                </p>
+        	</div>
+        </div>
+        <!--05-->
+        <div class="swiper-slide">
+        	<div class="box box5">
+        		<p class="ani box5-p4" swiper-animate-effect="rollIn" swiper-animate-duration="0.8s" swiper-animate-delay="0.9s">
+                	下雨天
+                </p>
+        		<img class="ani box5-01" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" src="img/230c931a-ec22-4971-99a1-d325e8cdaaff@321w_70Q_1an.png">
+        	    <img class="ani box5-02" swiper-animate-effect="flip" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s" src="img/21d27e57-b006-4611-b834-7a508ccf7de3@160w_70Q_1an.png">
+                <img class="ani box5-03" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" src="img/1db9f615-37a1-4e0c-bb77-bec7e480125d@132w_70Q_1an.png"> 
+        	    
+        	</div>
+        </div>
+        
+    </div>
+    <div class="swiper-pagination"></div>
+    
+    
+   <!-- <audio src="mp3/PRC 巴音汗 - 80000 ! (prod.by DROCY原声版).mp3" autoplay="autoplay" loop="loop"></audio>	-->
+    <audio src="mp3/C400000Egh8e0y9LXl.mp3" autoplay="autoplay" loop="loop"></audio>	
+	<div id="music"> 
+	   <div class="music-box">
+	   	    
+	   </div>
+	</div>
+	
+	<div class="jtbox"> </div>
+    
+    
+</div>
+
+    
+<script src="vue/dist/vue.js"></script>
+<script src="dist/js/swiper.js"></script>
+<script src="dist/js/swiper.animate1.0.2.min.js"></script>
+
+<script>
+    (function () {
+        var vm = new Vue({
+            el:"#app",
+            beforeMount:function(){
+
+            },
+            mounted:function () {
+                var swiper = new Swiper(".swiper-container",{
+                    onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+                        swiperAnimateCache(swiper); //隐藏动画元素
+                        swiperAnimate(swiper); //初始化完成开始动画
+                    },
+                    
+                    onSlideChangeEnd: function(swiper){
+                        swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+                    },
+                    autoplay:15000,
+                    direction:"vertical",
+                    loop:true,
+                    pagination:".swiper-pagination",
+                    effect : 'fade',
+					cube: {
+					  slideShadows: true,
+					  shadow: true,
+					  shadowOffset: 100,
+					  shadowScale: 0.6
+					}
+                })
+
+            }
+        });
+    })();
+    
+    var music=document.getElementById("music");
+	var flag=true;
+	var audioMusic=document.querySelector("audio");
+	
+	music.onclick=function(){
+		console.log(audioMusic.played);
+		console.log(audioMusic.paused);
+		if(audioMusic.paused){//暂停
+			audioMusic.play();
+			document.getElementsByClassName("music-box")[0].style.animation="change 1.2s linear infinite";
+		}else{//播放
+			audioMusic.pause();
+			document.getElementsByClassName("music-box")[0].style.animation="none";
+		}
+	}
+</script>
+</body>
+</html>

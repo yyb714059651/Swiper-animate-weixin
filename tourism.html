@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="dist/css/animate.css">
+    <link rel="stylesheet" href="dist/css/swiper.css">
+    <style>
+        * {
+            margin:0;padding: 0;
+        }
+        html,body,.swiper-container{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        #music{
+			position:fixed;
+			right:0%;
+			top:0%;
+			width:5rem;
+		    height: 4rem;
+		    background: url(img/music_c0fda01.gif) no-repeat center;
+		    background-size: 60%;
+		    z-index: 50;		  	    
+		}
+		.music-box{	
+			width: 2.5rem;
+		    height: 2.5rem;
+		    position: absolute;
+		    top: calc(50% - .75rem);
+		    left: calc(50% - .75rem);
+		    margin-top: .25rem;
+		    margin-left: -.75rem;
+		    background: url(img/music_off_8d94020.png) transparent no-repeat center center;
+		    background-size: 100% 100%;		   
+		    animation: change 1.2s linear infinite;		   
+		}
+		
+		@keyframes change{
+			from{
+				transform: rotate(0deg);
+			}
+			to{
+				transform: rotate(360deg);
+			}
+		}
+		.jtbox{
+			position: absolute;
+			width: 2rem;
+			height: 1rem;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			bottom: .5rem;
+			background: url(img/web-swipe-tip_95ef4d6.png) no-repeat;
+			background-size: 100% 100%;
+			/*-webkit-animation: webSwipeTipAfter 1.5s infinite ease-in-out;*/
+			animation: webAfter 1.5s infinite ease-in-out;
+			z-index: 100;	
+		}
+		@keyframes webAfter{
+			from{
+				transform: translateY(-30px);
+				}
+			to{
+				transform: translateY(-2px);
+			}
+		}
+		
+        .box {
+            height: 100%;
+            width: 100%;
+        }
+
+        .box1 {
+            background: url(img/7cad769078e237b5.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+        .box1 p{
+        	color: cyan;
+        	font-size: 25px;
+        }
+        .box2 {
+            background: url(img/18b465dcc4fd5cf7.jpg_r_1081x721_8fd79951.jpg) no-repeat;
+            background-size: 100% 100%;
+            
+        }
+        .box3 {
+            background: url(img/720beb019e11ffb5.jpg) no-repeat;
+            background-size: 100% 100%;
+        } 
+        .box4 {
+            background: url(img/20140630145306_27561.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+        .box-left{      	
+        	border-radius: 100%;
+			height: 20%;
+			position: absolute;
+			width: 33%;
+			margin: 19% 6%;
+        }
+        .box-right{
+        	border-radius: 100%;
+		    height: 28%;
+		    position: absolute;
+		    width: 39%;
+		    margin: 50% 55%;
+        }
+        .box2-kk{       	
+        	height: 80%;
+			position: absolute;
+			width: 90%;
+			margin: 18% 5%;
+        }
+        .box2-01{
+        	
+			height: 20%;
+			position: absolute;
+			width: 33%;
+			margin: 36% 8%;
+        }
+        .box2-02{
+        	
+		    height: 28%;
+		    position: absolute;
+		    width: 39%;
+		    margin: 100% 53%;
+        }
+        .box2-p1{
+        	color: #A71D5D;
+        	font-size: 25px;
+        	position: absolute;
+        	display: block;
+        	margin: 100% 15%;  	
+        }
+        .box2-p2{
+        	color: #A71D5D;
+        	font-size: 25px;
+        	position: absolute;
+        	display: block;
+        	margin: 115% 15%;       	
+        }
+        .box2-p3{
+        	color: #A71D5D;
+        	font-size: 25px;
+        	position: absolute;
+        	display: block;
+        	margin: 130% 15%;       	
+        }
+        .box3-01{
+    	    height: 50%;
+		    position: absolute;
+		    width: 50%;
+		    margin: 0% 0%;
+        }
+        .box3-02{
+    	    height: 50%;
+			position: absolute;
+			width: 40%;
+			margin: 90% 0%;
+        }
+        .box3-03{
+    	    height: 50%;
+		    position: absolute;
+		    width: 50%;
+		    margin: 89% 50%;
+        }
+        .box3-04{
+        	border-radius: 100%;
+		    height: 45%;
+		    position: absolute;
+		    width: 50%;
+		    margin: 21% 46%;
+        }
+        .box4-01{
+        	height: 50%;
+		    position: absolute;
+		    width: 50%;
+		    margin: -1% -1%;
+        }
+        .box4-02{
+        	height: 41%;
+		    position: absolute;
+		    width: 50%;
+		    margin: 0% 50%;
+        }
+        .box4-03{
+        	height: 50%;
+		    position: absolute;
+		    width: 50%;
+		    margin: 76% 50%;
+        }
+        .box4-p1{
+        	color: red;
+        	font-size: 25px;
+        	position: absolute;
+        	display: block;
+        	margin: 80% 15%; 
+        }
+        .box4-p2{
+        	color: red;
+        	font-size: 25px;
+        	position: absolute;
+        	display: block;
+        	margin: 100% 15%; 
+        }
+        .box4-p3{
+        	color: red;
+        	font-size: 25px;
+        	position: absolute;
+        	display: block;
+        	margin: 120% 15%; 
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+
+<div class="swiper-container" id="app">
+    <div class="swiper-wrapper">
+    	<!--01-->
+        <div class="swiper-slide">
+            <div class="box box1">
+                <img class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.6s" swiper-animate-delay="0.3s" src="img/1956423c-2bc4-47a7-9a32-3b7d38b7a7fa-3281.png" style="width:58%;margin:25%;">
+                <p class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s"  style="width:52%;margin:-15% 30%;">
+                	Welcome You 
+                </p>
+                <img class="ani box-left" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" src="img/3f23949a3a4ce1b5.jpg">
+                <img class="ani box-right" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" src="img/20140630145306_27561.jpg">
+            </div>
+        </div>
+        <!--02-->
+        <div class="swiper-slide">
+        	<div class="box box2">	
+        		<p class="ani box2-p1" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.6s" swiper-animate-delay="0.5s">
+                	玉龙雪山
+                </p>
+                <p class="ani box2-p2" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.6s" swiper-animate-delay="0.6s">
+                	丽江古城
+                </p>
+                <p class="ani box2-p3" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.6s" swiper-animate-delay="0.7s">
+                	苍山 洱海
+                </p>
+        		<img class="ani box2-kk" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" src="img/107b8e6c-ba12-41a9-9037-7b88e06e783b-8237.png">
+        	    <img class="ani box2-01" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" src="img/3f23949a3a4ce1b5.jpg">
+                <img class="ani box2-02" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" src="img/20140630145306_27561.jpg"> 
+        	    
+        	</div>
+        </div>
+        <!--03-->
+        <div class="swiper-slide">
+        	<div class="box box3">
+        		<img class="ani box3-01" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" src="img/09e5fe11-f97b-495d-ba86-25279fcf81fc@228w_70Q_1an.png">
+        	    <img class="ani box3-02" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" src="img/da2a4c56-34a9-4fe6-9aa2-d61e9cb04c73@86w_70Q_1an.png">
+                <img class="ani box3-03" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" src="img/68f9671a-4657-4d32-b270-9c75f1dd3fa8@265w_70Q_1an.png"> 
+        	    <img class="ani box3-04" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.5s" src="img/center (1).jpg"> 
+        	</div>
+        </div>
+        <!--04-->
+        <div class="swiper-slide">
+        	<div class="box box4">
+        		<img class="ani box4-01" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" src="img/b79ea8d5-d727-49ca-9184-825067a849d5-9110.png">
+        	    <img class="ani box4-02" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" src="img/e975f996-9906-48c5-84c7-1dddd10600df-2202.png">
+        	    <img class="ani box4-03" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" src="img/5a41ce0e-45c3-4a08-90e8-2f389c780e67-2542.png"> 
+        	    <p class="ani box4-p1" swiper-animate-effect="zoomIn" swiper-animate-duration="0.6s" swiper-animate-delay="0.5s">
+                	云南旅游
+                </p>
+                <p class="ani box4-p2" swiper-animate-effect="rollIn" swiper-animate-duration="0.6s" swiper-animate-delay="0.7s">
+                	玉龙雪山
+                </p>
+                <p class="ani box4-p3" swiper-animate-effect="tada" swiper-animate-duration="0.6s" swiper-animate-delay="0.9s">
+                	欢迎您！！！
+                </p>
+        	</div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    
+    <audio src="mp3/手鼓.mp3" autoplay="autoplay" loop="loop"></audio>		
+	<div id="music"> 
+	   <div class="music-box">
+	   	    
+	   </div>
+	</div>
+	<div class="jtbox"> </div>
+    
+    
+</div>
+
+    
+<script src="vue/dist/vue.js"></script>
+<script src="dist/js/swiper.js"></script>
+<script src="dist/js/swiper.animate1.0.2.min.js"></script>
+
+<script>
+    (function () {
+        var vm = new Vue({
+            el:"#app",
+            beforeMount:function(){
+
+            },
+            mounted:function () {
+                var swiper = new Swiper(".swiper-container",{
+                    onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+                        swiperAnimateCache(swiper); //隐藏动画元素
+                        swiperAnimate(swiper); //初始化完成开始动画
+                    },
+                    
+                    onSlideChangeEnd: function(swiper){
+                        swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+                    },
+                    autoplay:15000,
+                    direction:"vertical",
+                    loop:true,
+                    pagination:".swiper-pagination",
+                    effect : 'coverflow',
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    coverflow: {
+                        rotate: 30,
+                        stretch: 10,
+                        depth: 60,
+                        modifier: 2,
+                        slideShadows : true
+                    }
+                })
+
+            }
+        });
+    })();
+    
+    var music=document.getElementById("music");
+	var flag=true;
+	var audioMusic=document.querySelector("audio");
+	
+	music.onclick=function(){
+		console.log(audioMusic.played);
+		console.log(audioMusic.paused);
+		if(audioMusic.paused){//暂停
+			audioMusic.play();
+			document.getElementsByClassName("music-box")[0].style.animation="change 1.2s linear infinite";
+		}else{//播放
+			audioMusic.pause();
+			document.getElementsByClassName("music-box")[0].style.animation="none";
+		}
+	}
+</script>
+</body>
+</html>
